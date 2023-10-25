@@ -91,7 +91,7 @@ const determineSupportedHomeKitAccessories = (
     )
     .when(
       ([type, ops]) =>
-        type === 'SWITCH' &&
+        type === 'SWITCH' || type === 'AIR_FRESHENER' &&
         ops.includes(SupportedActions.setBrightness) &&
         supportsRequiredActions(LightAccessory.requiredOperations, ops),
       () =>
